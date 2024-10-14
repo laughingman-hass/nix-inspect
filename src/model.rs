@@ -273,10 +273,10 @@ impl From<String> for BrowserPath {
 pub fn test_expr_conversion() {
 	let path = BrowserPath::from(".".to_string());
 	assert_eq!(path.to_expr(), "");
-	let path = BrowserPath::from(".nixosConfigurations".to_string());
-	assert_eq!(path.to_expr(), "nixosConfigurations");
-	let path = BrowserPath::from(r#".nixosConfigurations."example.com""#.to_string());
-	assert_eq!(path.to_expr(), r#"nixosConfigurations."example.com""#);
+	let path = BrowserPath::from(".darwinConfigurations".to_string());
+	assert_eq!(path.to_expr(), "darwinConfigurations");
+	let path = BrowserPath::from(r#".darwinConfigurations."example.com""#.to_string());
+	assert_eq!(path.to_expr(), r#"darwinConfigurations."example.com""#);
 }
 
 #[derive(Default, Debug, PartialEq, Eq)]

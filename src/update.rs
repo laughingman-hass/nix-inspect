@@ -285,7 +285,7 @@ impl UpdateContext {
 				let path_str = ".".to_string()
 					+ &current_path
 						.map(|x| x.to_expr() + if x.0.len() > 1 { "." } else { "" })
-						.unwrap_or("nixosConfigurations.".to_string());
+						.unwrap_or("darwinConfigurations.".to_string());
 				model.path_navigator_input = InputState::Active(InputModel {
 					typing: true,
 					cursor_position: path_str.len(),

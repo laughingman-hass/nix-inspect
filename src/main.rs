@@ -114,7 +114,7 @@ fn main() -> color_eyre::Result<()> {
 		// Same behavior as nixos-rebuild
 		let hostname = nix::unistd::gethostname()?;
 		let hostname = hostname.to_string_lossy();
-		let hostname_path = format!(".nixosConfigurations.{}", hostname);
+		let hostname_path = format!(".darwinConfigurations.{}", hostname);
 
 		let user = env::var("USER")?;
 		let user_path = format!("{hostname_path}.config.home-manager.users.{user}");
